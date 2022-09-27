@@ -6,7 +6,7 @@
 #    By: barbizu- <barbizu-@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 09:54:35 by barbizu-          #+#    #+#              #
-#    Updated: 2022/05/19 18:30:37 by barbizu-         ###   ########.fr        #
+#    Updated: 2022/09/22 11:23:16 by barbizu-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ printf:	${OBJS} ${OBJS_B} ${OBJS_P}
 all:	${NAME}
 
 clean:
-		${RM} ${OBJS} ${OBJS_B}
+		${RM} ${OBJS} ${OBJS_B} ${OBJS_P}
 
 fclean:
 		${RM} ${NAME}

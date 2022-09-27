@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap_push.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: barbizu- <barbizu-@student.42malaga.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/14 18:03:01 by barbizu-          #+#    #+#             */
+/*   Updated: 2022/09/14 18:03:59 by barbizu-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 void	sa(t_stack *a)
 {
-	int temp;
+	int	temp;
 
 	temp = 0;
 	if (a->top >= 0)
@@ -16,7 +27,7 @@ void	sa(t_stack *a)
 
 void	sb(t_stack *b)
 {
-	int temp;
+	int	temp;
 
 	temp = 0;
 	if (b->top >= 0)
@@ -30,8 +41,21 @@ void	sb(t_stack *b)
 
 void	ss(t_stack *a, t_stack *b)
 {
-	sa(a);
-	sb(b);
+	int	temp;
+
+	temp = 0;
+	if (a->top >= 0)
+	{
+		temp = a->items[a->top];
+		a->items[a->top] = a->items[a->top - 1];
+		a->items[a->top - 1] = temp;
+	}
+	if (b->top >= 0)
+	{
+		temp = b->items[b->top];
+		b->items[b->top] = b->items[b->top - 1];
+		b->items[b->top - 1] = temp;
+	}
 	write(1, "ss\n", 3);
 }
 

@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # define FORMATS "cspdiuxX%"
 # include <stdarg.h>
+# include <limits.h>
 
 typedef struct s_list
 {

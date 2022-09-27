@@ -13,9 +13,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int		n;
-	int		cnt;
-	int		sign;
+	long long		n;
+	int				cnt;
+	int				sign;
 
 	cnt = 0;
 	n = 0;
@@ -26,7 +26,7 @@ int	ft_atoi(const char *str)
 	if (str[cnt] == '-' || str[cnt] == '+')
 	{
 		if (str[cnt] == '-')
-			sign = -1;
+			sign *= -1;
 		cnt++;
 	}
 	while (str[cnt] >= '0' && str[cnt] <= '9')
@@ -34,5 +34,8 @@ int	ft_atoi(const char *str)
 		n = n * 10 + str[cnt] - '0';
 		cnt++;
 	}
-	return (n * sign);
+	n *= sign;
+	if (n < INT_MIN || n > INT_MAX)
+		return (0);
+	return (n);
 }

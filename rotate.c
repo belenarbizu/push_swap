@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: barbizu- <barbizu-@student.42malaga.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/14 18:15:32 by barbizu-          #+#    #+#             */
+/*   Updated: 2022/09/14 18:15:53 by barbizu-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 void	ra(t_stack *a)
 {
-	int i;
-	int temp;
+	int	i;
+	int	temp;
 
 	i = a->top;
 	temp = top(a);
@@ -19,7 +30,7 @@ void	ra(t_stack *a)
 void	rb(t_stack *b)
 {
 	int	i;
-	int temp;
+	int	temp;
 
 	i = b->top;
 	temp = top(b);
@@ -34,8 +45,8 @@ void	rb(t_stack *b)
 
 void	rr(t_stack *a, t_stack *b)
 {
-	int i;
-	int temp;
+	int	i;
+	int	temp;
 
 	i = a->top;
 	temp = top(a);
